@@ -6,6 +6,7 @@ module lk.ijse.orm.ormh {
     requires org.hibernate.orm.core;
     requires jakarta.persistence;
     requires java.naming;
+    requires java.desktop;
 
     opens lk.ijse.orm.ormh to javafx.fxml;
     opens lk.ijse.orm.ormh.config to jakarta.persistence;
