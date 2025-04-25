@@ -28,12 +28,12 @@ public class AdminAuthController {
     private PasswordField passwordTxt;
 
     @FXML
-    void backLanding(ActionEvent event) throws IOException {
+    void backLanding(ActionEvent event) throws Exception {
         new WindowUtils().navigateTo("RoleView", adminLoginAuthPane);
     }
 
     @FXML
-    void gotoChoicesView(ActionEvent event) throws IOException {
+    void gotoChoicesView(ActionEvent event) throws Exception {
         new WindowUtils().navigateTo("AdminView", adminLoginAuthPane);
     }
 
