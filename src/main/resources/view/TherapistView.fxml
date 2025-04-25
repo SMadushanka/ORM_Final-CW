@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="pane" prefHeight="550.0" prefWidth="806.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.orm.ormh.controller.TherapistController">
+   <children>
+      <JFXButton fx:id="saveBtn" layoutX="336.0" layoutY="211.0" onAction="#saveTherapist" prefHeight="40.0" prefWidth="116.0" style="-fx-background-color: #0d6efd;" text="save" textFill="#fcfcfc">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <font>
+            <Font name="Gabarito Regular" size="13.0" />
+         </font>
+      </JFXButton>
+      <JFXButton fx:id="updateBtn" layoutX="471.0" layoutY="211.0" onAction="#updateTherapist" prefHeight="40.0" prefWidth="116.0" style="-fx-background-color: #0d6efd;" text="Update" textFill="#fcfcfc">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <font>
+            <Font name="Gabarito Regular" size="13.0" />
+         </font>
+      </JFXButton>
+      <JFXButton fx:id="deleteBtn" layoutX="605.0" layoutY="211.0" onAction="#deleteTherapist" prefHeight="40.0" prefWidth="116.0" style="-fx-background-color: #0d6efd;" text="Delete" textFill="#fcfcfc">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <font>
+            <Font name="Gabarito Regular" size="13.0" />
+         </font>
+      </JFXButton>
+      <Label fx:id="idLbl" layoutX="671.0" layoutY="52.0" prefHeight="34.0" prefWidth="99.0" text="Label">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+      </Label>
+      <TextField fx:id="nameTxt" layoutX="86.0" layoutY="159.0" prefHeight="40.0" prefWidth="310.0" promptText="Name" style="-fx-background-color: #fafafa; -fx-padding: 0 15px;" />
+      <TextField fx:id="emailTxt" layoutX="411.0" layoutY="159.0" prefHeight="40.0" prefWidth="310.0" promptText="email" style="-fx-background-color: #fafafa; -fx-padding: 0 15px;" />
+      <TextField fx:id="contactTxt" layoutX="86.0" layoutY="211.0" prefHeight="40.0" prefWidth="228.0" promptText="contact" style="-fx-background-color: #fafafa; -fx-padding: 0 15px;" />
+      <TableView fx:id="threTbl" layoutX="51.0" layoutY="285.0" onMouseClicked="#searchTherapist" prefHeight="200.0" prefWidth="724.0">
+         <columns>
+            <TableColumn fx:id="idCol" prefWidth="75.0" text="ID" />
+            <TableColumn fx:id="nameCol" prefWidth="227.1999969482422" text="Name" />
+            <TableColumn fx:id="emailCol" prefWidth="280.79998779296875" text="Email" />
+            <TableColumn fx:id="contactCol" prefWidth="139.99993896484375" text="Contact" />
+         </columns>
+      </TableView>
+      <ImageView fitHeight="99.0" fitWidth="91.0" layoutX="24.0" layoutY="24.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../../../../ORM/ORM/src/main/resources/assests/logo%20(2).png" />
+         </image>
+      </ImageView>
+      <JFXButton layoutX="44.0" layoutY="521.0" onAction="#gotoBack" text="Back">
+         <font>
+            <Font name="Segoe UI Bold" size="12.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+   </children>
+</AnchorPane>

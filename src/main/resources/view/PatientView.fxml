@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="pane" prefHeight="550.0" prefWidth="806.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.orm.ormh.controller.PatientController">
+   <children>
+      <ComboBox fx:id="programmeCmb" layoutX="132.0" layoutY="230.0" onAction="#selectProgramme" prefHeight="39.0" prefWidth="228.0" promptText="select Programme" style="-fx-background-color: #fafafa; -fx-padding: 0 15px;" />
+      <ComboBox fx:id="sessionCmb" layoutX="449.0" layoutY="230.0" onAction="#selectSession" prefHeight="39.0" prefWidth="228.0" promptText="select Session" style="-fx-background-color: #fafafa; -fx-padding: 0 15px;" />
+      <Label fx:id="proLbl" layoutX="382.0" layoutY="238.0" text="Label">
+         <font>
+            <Font name="Poppins Bold" size="16.0" />
+         </font>
+      </Label>
+      <Label fx:id="sessionLbl" layoutX="700.0" layoutY="238.0" text="Label">
+         <font>
+            <Font name="Poppins Bold" size="16.0" />
+         </font>
+      </Label>
+      <Label fx:id="idLbl" layoutX="733.0" layoutY="35.0" text="Label">
+         <font>
+            <Font name="Poppins Bold" size="16.0" />
+         </font>
+      </Label>
+      <TextField fx:id="nameTxt" layoutX="132.0" layoutY="94.0" prefHeight="39.0" prefWidth="326.0" promptText="Name" style="-fx-background-color: #fafafa; -fx-padding: 0 15px;" />
+      <TextField fx:id="emailTxt" layoutX="132.0" layoutY="162.0" prefHeight="39.0" prefWidth="347.0" promptText="Email" style="-fx-background-color: #fafafa; -fx-padding: 0 15px;" />
+      <TextField fx:id="contactTxt" layoutX="466.0" layoutY="94.0" prefHeight="39.0" prefWidth="228.0" promptText="contact" style="-fx-background-color: #fafafa; -fx-padding: 0 15px;" />
+      <JFXButton fx:id="saveBtn" layoutX="446.0" layoutY="284.0" onAction="#savePatient" prefHeight="39.0" prefWidth="99.0" style="-fx-background-color: #0d6efd;" text="Save" textFill="#fcfcfc">
+         <font>
+            <Font name="Gabarito Regular" size="13.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <JFXButton fx:id="updateBtn" layoutX="551.0" layoutY="284.0" onAction="#updatePatient" prefHeight="39.0" prefWidth="90.0" style="-fx-background-color: #0d6efd;" text="Update" textFill="#fcfcfc">
+         <font>
+            <Font name="Gabarito Regular" size="13.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <JFXButton fx:id="deleteBtn" layoutX="647.0" layoutY="284.0" onAction="#deletePatient" prefHeight="39.0" prefWidth="99.0" style="-fx-background-color: #0d6efd;" text="Delete" textFill="#fcfcfc">
+         <font>
+            <Font name="Gabarito Regular" size="13.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <TableView fx:id="patTbl" layoutX="25.0" layoutY="336.0" onMouseClicked="#searchPatient" prefHeight="200.0" prefWidth="750.0">
+         <columns>
+            <TableColumn fx:id="idCol" prefWidth="77.5999755859375" text="Pat_ID" />
+            <TableColumn fx:id="nameCol" prefWidth="212.00000762939453" text="Name" />
+            <TableColumn fx:id="emailCol" prefWidth="201.60000610351562" text="Email" />
+            <TableColumn fx:id="contactCol" prefWidth="125.60003662109375" text="contact" />
+            <TableColumn fx:id="programmeCol" prefWidth="69.5999755859375" text="ProID" />
+            <TableColumn fx:id="sessionCol" prefWidth="63.99997558593748" text="SessionID" />
+         </columns>
+      </TableView>
+      <TextField fx:id="feesTxt" layoutX="489.0" layoutY="162.0" prefHeight="39.0" prefWidth="204.0" promptText="fees" style="-fx-background-color: #fafafa; -fx-padding: 0 15px;" />
+      <Label layoutX="132.0" layoutY="72.0" text="Name">
+         <font>
+            <Font name="Gabarito Regular" size="12.0" />
+         </font>
+      </Label>
+      <Label layoutX="465.0" layoutY="72.0" text="Contact">
+         <font>
+            <Font name="Gabarito Regular" size="12.0" />
+         </font>
+      </Label>
+      <Label layoutX="132.0" layoutY="142.0" text="Email Address">
+         <font>
+            <Font name="Gabarito Regular" size="12.0" />
+         </font>
+      </Label>
+      <Label layoutX="491.0" layoutY="142.0" text="Fees">
+         <font>
+            <Font name="Gabarito Regular" size="12.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="84.0" fitWidth="90.0" layoutX="24.0" layoutY="24.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../../../../ORM/ORM/src/main/resources/assests/logo%20(2).png" />
+         </image>
+      </ImageView>
+      <JFXButton layoutX="40.0" layoutY="298.0" onAction="#gotoBack" text="Back">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+   </children>
+</AnchorPane>

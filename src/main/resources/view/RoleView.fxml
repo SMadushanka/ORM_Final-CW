@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane fx:id="selectRolePane" prefHeight="550.0" prefWidth="806.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.orm.ormh.controller.RoleController">
+   <children>
+      <Label layoutX="245.0" layoutY="156.0" text="Choose how you want to access the system_" textFill="#333333">
+         <font>
+            <Font name="Gabarito Regular" size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="245.0" layoutY="178.0" text="Select" textFill="#333333">
+         <font>
+            <Font name="Gabarito Regular" size="36.0" />
+         </font>
+      </Label>
+      <Label layoutX="485.0" layoutY="177.0" text="Role" textFill="#333333">
+         <font>
+            <Font name="Gabarito Regular" size="36.0" />
+         </font>
+      </Label>
+      <Pane layoutX="354.0" layoutY="177.0" prefHeight="46.0" prefWidth="118.0" style="-fx-background-color: #0d6efd; -fx-background-radius: 3px;">
+         <children>
+            <Label layoutX="23.0" layoutY="1.0" text="Your" textFill="#fcfcfc">
+               <font>
+                  <Font name="Gabarito Regular" size="36.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+      <Label layoutX="222.0" layoutY="231.0" text="Access the system based on your role: Admin or Receptionist only." textFill="#333333">
+         <font>
+            <Font name="Gabarito Regular" size="13.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="91.0" fitWidth="85.0" layoutX="24.0" layoutY="24.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../../../../ORM/ORM/src/main/resources/assests/logo%20(2).png" />
+         </image>
+      </ImageView>
+      <JFXButton layoutX="247.0" layoutY="285.0" onAction="#gotoAdminAuth" prefHeight="144.0" prefWidth="145.0" style="-fx-border-color: #0d6efd; -fx-border-radius: 3px;" text="Im Admin" textFill="#0d6efd">
+         <font>
+            <Font name="Gabarito Regular" size="17.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <JFXButton layoutX="414.0" layoutY="285.0" onAction="#gotoReceptionAuth" prefHeight="144.0" prefWidth="145.0" style="-fx-border-color: #0d6efd; -fx-border-radius: 3px;" text="Im Reception" textFill="#0d6efd">
+         <font>
+            <Font name="Gabarito Regular" size="17.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <JFXButton layoutX="57.0" layoutY="501.0" onAction="#backLandingPage" text="Back">
+         <font>
+            <Font name="Segoe UI Bold" size="12.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+   </children>
+</AnchorPane>
