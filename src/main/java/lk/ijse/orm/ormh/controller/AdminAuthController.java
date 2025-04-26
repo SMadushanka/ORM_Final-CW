@@ -34,11 +34,6 @@ public class AdminAuthController {
 
     @FXML
     void gotoChoicesView(ActionEvent event) throws Exception {
-        new WindowUtils().navigateTo("AdminView", adminLoginAuthPane);
-    }
-
-    @FXML
-    void gotoRegister(MouseEvent event) throws Exception {
         try {
             String email = emailTxt.getText();
             String password = passwordTxt.getText();
@@ -47,11 +42,16 @@ public class AdminAuthController {
 
             if (resp) {
                 new WindowUtils().navigateTo("AdminChoicesView", adminLoginAuthPane);
-            }else{
+            } else {
                 new Alert(Alert.AlertType.ERROR, "Something Went Wrong!").show();
             }
         } catch (LoginException e) {
             e.printStackTrace();
         }
+    }
+
+    @FXML
+    void gotoRegister(MouseEvent event) throws Exception {
+        new WindowUtils().navigateTo("AdminView", adminLoginAuthPane);
     }
 }
