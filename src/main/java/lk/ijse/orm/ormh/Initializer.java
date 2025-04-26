@@ -14,7 +14,7 @@ public class Initializer extends Application {
     public void start(Stage stage) throws IOException {
         Parent root = FXMLLoader.load(getClass().getResource("/view/Landing.fxml"));
         stage.setScene(new Scene(root));
-        stage.setTitle("SESSIONS");
+        stage.setTitle("THERAPIST CENTER");
         stage.show();
     }
 
