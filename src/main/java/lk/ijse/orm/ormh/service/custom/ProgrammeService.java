@@ -7,4 +7,10 @@ import java.util.ArrayList;
 
 public interface ProgrammeService extends SuperService {
     ArrayList<ProgrammeDto> getAllProgrammes();
+
+    boolean saveProgramme(ProgrammeDto programmeDto) throws Exception;
+
+    boolean deleteProgramme(int id) throws Exception;
+
+    boolean updateProgramme(ProgrammeDto programmeDto);
 }

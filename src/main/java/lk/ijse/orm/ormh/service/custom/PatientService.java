@@ -13,4 +13,5 @@ public interface PatientService extends SuperService {
     ArrayList<PatientDto> getAllPatients();
 
     boolean updatePatient(PatientDto patientDto);
+
 }
