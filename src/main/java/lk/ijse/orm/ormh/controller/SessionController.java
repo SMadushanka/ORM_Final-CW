@@ -126,7 +126,7 @@ public class SessionController implements Initializable {
 
     @FXML
     void selectTherapist(ActionEvent event) {
-        SessionTM selectedName = therapistCmb.getSelectionModel().getSelectedItem();
+        String selectedName = therapistCmb.getSelectionModel().getSelectedItem();
         TherapistDto selectedDto = therapistMap.get(selectedName);
 
         if (selectedDto != null) {
@@ -157,15 +157,14 @@ public class SessionController implements Initializable {
         }
     }
     @FXML
-    private ComboBox<SessionTM> therapistCmb;
+    private ComboBox<String> therapistCmb;
 
-    private Map<SessionTM, TherapistDto> therapistMap = new HashMap<>();
+    private Map<String, TherapistDto> therapistMap = new HashMap<>();
     public void getAllTherapistNames(){
         ArrayList<TherapistDto>therapistDtos = therapistService.getAllTherapists();
         for (TherapistDto dto : therapistDtos ) {
-            SessionTM sessionTM = new SessionTM(0, dto.getName(), 0, 0, dto.getId());
-            therapistMap.put(sessionTM, dto);  // Save mapping
-            therapistCmb.getItems().add(sessionTM);
+            therapistMap.put(dto.getName(), dto);  // Save mapping
+            therapistCmb.getItems().add(dto.getName());
         }
     }
 
